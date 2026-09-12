@@ -1,0 +1,32 @@
+{
+  "checkpoint": "best_model.pth (run 38zzvvox, epoch 5, 2026-04-16 06:21)",
+  "val_effective_n": 129,
+  "val_gold_span": 117,
+  "binary": {
+    "acc": 0.969,
+    "P": 0.9669,
+    "R": 1.0,
+    "F1": 0.9832
+  },
+  "conditional_EM_old_metric": 0.7778,
+  "logged_in_paper": {
+    "acc": 0.9612,
+    "F1": 0.9791,
+    "span_f1": 0.8034
+  },
+  "joint_exact_match": {
+    "TP": 93,
+    "FP": 28,
+    "FN": 24,
+    "none_fp": 4,
+    "P": 0.7686,
+    "R": 0.7949,
+    "F1": 0.7815
+  },
+  "char_overlap_micro": {
+    "P": 0.4216,
+    "R": 0.8826,
+    "F1": 0.5706
+  },
+  "char_overlap_macro_all": 0.6061
+}

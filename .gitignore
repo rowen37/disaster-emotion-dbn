@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.venv*/
+wandb/
+
+# model artifacts & data (not redistributed)
+checkpoints/
+*.pt
+*.pth
+resource/
+smp2020_data/
+data_input/
+span_output_new/
+
+# R
+.Rhistory
+.RData
+.RDataTmp
+.Rproj.user/
+*.rds
+
+# outputs
+output/
+*.log
+
+# OS
+.DS_Store
