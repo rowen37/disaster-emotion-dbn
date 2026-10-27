@@ -1,0 +1,11 @@
+{
+  "epochs": 6,
+  "seed": 42,
+  "model": "C:\\Users\\35367\\models\\chinese-roberta-wwm-ext",
+  "architecture_version": "harmful_signal_crf_v6",
+  "architecture": "encoder-harmful-signal-presence-and-linear-chain-crf",
+  "checkpoint_format_version": 6,
+  "class_balance_beta": 0.999,
+  "tag_aux_ce_weight": 0.25,
+  "checkpoint": "D:\\disaster-emotion-dbn\\stage2-behavior-extraction\\outputs\\checkpoints\\final_model.pth"
+}

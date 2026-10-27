@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import re
 from collections import Counter
 
-file_path = 'smp2020_data/usual_train.txt'
+file_path = '/Users/rogerbqw/Downloads/毕设数据/Thesis-ZJU/SA_NER/smp2020_data/usual_train.txt'
 
 # ---------- load and parse the JSON array ----------
 with open(file_path, 'r', encoding='utf-8') as f:

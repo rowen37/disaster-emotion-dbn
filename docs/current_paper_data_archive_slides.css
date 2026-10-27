@@ -1,0 +1,396 @@
+:root {
+  --ink: #17222d;
+  --muted: #5e6d79;
+  --paper: #f7f4ed;
+  --accent: #d95f43;
+  --accent-dark: #943b2a;
+  --teal: #1f716f;
+  --teal-soft: #dceceb;
+  --gold: #b88725;
+  --line: #d9d3c8;
+  --soft: #eee9df;
+
+  /* unified type scale: every slide uses exactly these sizes */
+  --fs-body: 1em;
+  --fs-table: 0.80em;
+  --fs-result: 0.90em;
+  --fs-note: 0.75em;
+  --fs-label: 0.70em;
+}
+
+.reveal {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 30px;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  box-sizing: border-box;
+  padding: 46px 68px 34px;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--ink);
+  font-weight: 760;
+  letter-spacing: -0.025em;
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 2.15em;
+  line-height: 1.12;
+}
+
+.reveal h2 {
+  font-size: 1.42em;
+  line-height: 1.16;
+  margin: 0 0 0.52em;
+}
+
+.reveal h3 {
+  font-size: 1.03em;
+  margin: 0.35em 0 0.2em;
+}
+
+/* ---- unified body text: one size everywhere ---- */
+.reveal p,
+.reveal li {
+  font-size: var(--fs-body);
+  line-height: 1.45;
+}
+
+.reveal strong {
+  color: var(--accent-dark);
+  font-weight: 760;
+}
+
+.reveal code {
+  color: var(--teal);
+  background: transparent;
+  font-size: 0.93em;
+}
+
+/* ---- unified tables: one size everywhere ---- */
+.reveal table {
+  width: 100%;
+  margin: 0.3em 0 0;
+  border-collapse: collapse;
+  font-size: var(--fs-table);
+  line-height: 1.3;
+}
+
+.reveal table th {
+  color: var(--muted);
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 2px solid var(--ink);
+  padding: 0.34em 0.5em;
+}
+
+.reveal table td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.36em 0.5em;
+  vertical-align: top;
+}
+
+.reveal table td:first-child,
+.reveal table th:first-child {
+  font-weight: 720;
+}
+
+.reveal table tr:last-child td {
+  border-bottom: 2px solid var(--ink);
+}
+
+/* emphasis inside tables: color + weight only, never size */
+.pos {
+  color: var(--accent-dark);
+  font-weight: 720;
+}
+
+.neg {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ---- title slide ---- */
+.title-slide {
+  position: relative;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-slide::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 18px;
+  background: var(--accent);
+}
+
+.title-slide h1 {
+  max-width: 1050px;
+  margin-bottom: 0.35em;
+}
+
+.title-slide .subtitle {
+  color: var(--muted);
+  font-size: var(--fs-body);
+  max-width: 980px;
+}
+
+.title-slide .meta {
+  margin-top: 2.2em;
+  font-size: var(--fs-note);
+  color: var(--muted);
+}
+
+/* ---- section divider slides ---- */
+.section-divider {
+  position: relative;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 18px;
+  background: var(--teal);
+}
+
+.section-divider .divider-no {
+  color: var(--teal);
+  font-size: var(--fs-body);
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.section-divider h2 {
+  font-size: 2.0em;
+  margin: 0.12em 0 0.3em;
+}
+
+.section-divider .divider-sub {
+  color: var(--muted);
+  font-size: var(--fs-body);
+}
+
+.section-divider .divider-pages {
+  margin-top: 1.6em;
+  color: var(--muted);
+  font-size: var(--fs-note);
+}
+
+/* ---- recurring page furniture (same size on every slide) ---- */
+.stage-label {
+  display: inline-block;
+  margin-bottom: 0.45em;
+  color: var(--teal);
+  font-size: var(--fs-label);
+  font-weight: 760;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.result-line {
+  margin-top: 0.72em;
+  padding: 0.48em 0.72em;
+  border-left: 8px solid var(--accent);
+  background: #fffaf2;
+  font-size: var(--fs-result);
+  line-height: 1.42;
+}
+
+.result-line::before {
+  content: "结果解读  ";
+  color: var(--accent-dark);
+  font-weight: 760;
+}
+
+.note-line {
+  margin-top: 0.5em;
+  color: var(--muted);
+  font-size: var(--fs-note);
+  line-height: 1.38;
+}
+
+/* ---- layout helpers ---- */
+.two-col,
+.three-col {
+  display: grid;
+  align-items: start;
+  column-gap: 1.05em;
+}
+
+.two-col {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.col-block {
+  min-width: 0;
+}
+
+.subhead {
+  margin: 0.15em 0 0.35em;
+  color: var(--ink);
+  font-size: var(--fs-body);
+  font-weight: 760;
+  letter-spacing: -0.015em;
+}
+
+.pipeline {
+  display: grid;
+  grid-template-columns: 1fr 70px 1fr 70px 1fr;
+  align-items: center;
+  margin: 1.15em 0 0.7em;
+}
+
+.pipeline .step {
+  padding: 0.8em 0.65em;
+  border-top: 6px solid var(--teal);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.pipeline .step b {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: var(--fs-body);
+}
+
+.pipeline .step p {
+  color: var(--muted);
+  font-size: var(--fs-body);
+  line-height: 1.34;
+  margin: 0;
+}
+
+.pipeline .connector {
+  color: var(--accent);
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.parameter-map {
+  display: grid;
+  grid-template-columns: 0.7fr 2.15fr 2.4fr;
+  gap: 0;
+  margin-top: 0.15em;
+  font-size: var(--fs-table);
+  line-height: 1.32;
+}
+
+.parameter-map > div {
+  padding: 0.36em 0.6em;
+  border-bottom: 1px solid var(--line);
+}
+
+.parameter-map .head {
+  color: var(--muted);
+  border-bottom: 2px solid var(--ink);
+  font-weight: 700;
+}
+
+.parameter-map .symbol {
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.callout-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.05em;
+  margin-top: 0.25em;
+}
+
+.plain-block {
+  border-top: 5px solid var(--teal);
+  padding-top: 0.4em;
+}
+
+.plain-block.good {
+  border-top-color: var(--teal);
+}
+
+.plain-block.bad {
+  border-top-color: var(--accent);
+}
+
+.plain-block h3 {
+  margin-top: 0;
+}
+
+.plain-block p,
+.plain-block li {
+  font-size: var(--fs-body);
+}
+
+.plain-block ul {
+  margin-top: 0.3em;
+}
+
+.thin-list {
+  margin: 0.2em 0 0 1em;
+}
+
+.thin-list li {
+  margin-bottom: 0.28em;
+}
+
+.summary-claim {
+  margin: 0.56em 0;
+  padding: 0.18em 0 0.18em 0.75em;
+  border-left: 5px solid var(--teal);
+  font-size: var(--fs-body);
+  line-height: 1.38;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.formula {
+  margin: 0.3em 0;
+  font-size: var(--fs-body);
+}
+
+.formula .katex-display {
+  margin: 0.25em 0;
+}
+
+.reveal .slide-number {
+  color: var(--muted);
+  background: transparent;
+  font-size: 17px;
+}
+
+.reveal .progress {
+  height: 4px;
+  color: var(--accent);
+}
+
+@media print {
+  .reveal .slides section {
+    padding: 42px 62px 30px;
+  }
+}

@@ -16,10 +16,11 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from tqdm import tqdm
 import wandb
 
-MODEL_PATH = "/Users/rogerbqw/Downloads/span_extract/resource/chinese-roberta-wwm-ext"
-TRAIN_PATH = "smp2020_data/usual_train.txt"
-VAL_PATH = "smp2020_data/usual_eval_labeled.txt"
-SAVE_PATH = "/Users/rogerbqw/Downloads/SA_NER/best_model.pt"
+MODEL_PATH = "/Users/rogerbqw/Downloads/毕设数据/Thesis-ZJU/span_extract/resource/chinese-roberta-wwm-ext"
+TRAIN_PATH = "/Users/rogerbqw/Downloads/毕设数据/Thesis-ZJU/SA_NER/smp2020_data/usual_train.txt"
+VAL_PATH = "/Users/rogerbqw/Downloads/毕设数据/Thesis-ZJU/SA_NER/smp2020_data/usual_eval_labeled.txt"
+SAVE_PATH = "checkpoints/best_cls_1.pt"
+os.makedirs(os.path.dirname(SAVE_PATH) or ".", exist_ok=True)
 
 MAX_LEN = 64
 BATCH_SIZE = 16

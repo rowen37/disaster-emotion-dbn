@@ -1,0 +1,68 @@
+{
+  "input": "/Users/rogerbqw/Downloads/disaster-emotion-dbn/v2/stage2-behavior-extraction/data/behavior_training.csv",
+  "rows": 117,
+  "unique_record_ids": 117,
+  "unique_text_hashes": 117,
+  "behavior_positive": 96,
+  "groups": 117,
+  "group_leakage": false,
+  "n_folds": 5,
+  "split_seed": 42,
+  "per_fold": [
+    {
+      "fold": 0,
+      "n": 24,
+      "behavior_positive": 19,
+      "events_or_text_groups": 24,
+      "hazards": {
+        "typhoon": 13,
+        "general": 8,
+        "flood": 3
+      }
+    },
+    {
+      "fold": 1,
+      "n": 24,
+      "behavior_positive": 19,
+      "events_or_text_groups": 24,
+      "hazards": {
+        "typhoon": 13,
+        "general": 8,
+        "flood": 3
+      }
+    },
+    {
+      "fold": 2,
+      "n": 23,
+      "behavior_positive": 19,
+      "events_or_text_groups": 23,
+      "hazards": {
+        "typhoon": 12,
+        "general": 8,
+        "flood": 3
+      }
+    },
+    {
+      "fold": 3,
+      "n": 23,
+      "behavior_positive": 20,
+      "events_or_text_groups": 23,
+      "hazards": {
+        "typhoon": 12,
+        "general": 8,
+        "flood": 3
+      }
+    },
+    {
+      "fold": 4,
+      "n": 23,
+      "behavior_positive": 19,
+      "events_or_text_groups": 23,
+      "hazards": {
+        "typhoon": 13,
+        "general": 8,
+        "flood": 2
+      }
+    }
+  ]
+}

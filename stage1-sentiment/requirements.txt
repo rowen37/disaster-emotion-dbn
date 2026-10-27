@@ -2,6 +2,8 @@ torch
 transformers
 scikit-learn
 numpy
+pandas
+pyreadr
 tqdm
 wandb
 matplotlib

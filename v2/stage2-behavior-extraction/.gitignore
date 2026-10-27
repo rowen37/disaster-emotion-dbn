@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+outputs/checkpoints/
+outputs/runs/
+outputs/predictions/
+# 本目录同时保存已训练的模型与评估存档（体积大，不入库）
+checkpoints/
+runs/

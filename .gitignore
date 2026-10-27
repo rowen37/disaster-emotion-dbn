@@ -12,17 +12,31 @@ resource/
 smp2020_data/
 data_input/
 span_output_new/
+inputs/
 
 # R
 .Rhistory
 .RData
 .RDataTmp
 .Rproj.user/
+renv/
 *.rds
 
 # outputs
 output/
+data_stage2/
 *.log
 
 # OS
 .DS_Store
+
+# compiled Stan model binaries (any versioned folder)
+**/stan/dbn_core
+**/stan/dbn_moderator
+**/stan/dbn_context_moderation
+
+# heavy data / intermediates not redistributed (exceed GitHub 100MB file limit)
+*.tif
+output.csv/
+behavior_span_rows.csv
+*.inspect.ndjson

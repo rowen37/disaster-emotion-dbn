@@ -1,0 +1,20 @@
+{
+  "id": "original_no_five",
+  "label": "Original Stage 3 model without the five later additions",
+  "fit_model_r": "v2/stage3-dbn/R/fit_model.R",
+  "stan_core": "v2/stage3-dbn/stan/dbn_core.stan",
+  "stan_moderator": "v2/stage3-dbn/stan/dbn_moderator.stan",
+  "excluded_additions": [
+    "adjacent-grid spatial lag",
+    "posting-presence and positive-count joint model",
+    "residualized dynamic coefficients",
+    "population/GDP between-within decomposition",
+    "new context-covariate diagnostics and regularization"
+  ],
+  "default_hazards": [
+    "earthquake",
+    "landslide",
+    "debris_flow",
+    "typhoon"
+  ]
+}

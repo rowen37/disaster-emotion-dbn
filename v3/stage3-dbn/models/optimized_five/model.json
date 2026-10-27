@@ -1,0 +1,8 @@
+{
+  "id": "optimized_five",
+  "label": "Archived model with the five later additions",
+  "fit_model_r": "v3/stage3-dbn/R/fit_model.R",
+  "stan_core": "v3/stage3-dbn/stan/dbn_core.stan",
+  "stan_moderator": "v3/stage3-dbn/stan/dbn_moderator.stan",
+  "default_hazards": []
+}

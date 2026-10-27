@@ -1,0 +1,83 @@
+{
+  "n_runs": 15,
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "protocol": "event/text-grouped five-fold CV; inner group validation for early stopping; CRF spans are decoded independently of the continuous presence score",
+  "metrics": {
+    "behavior_presence_acc": {
+      "mean": 0.9420000000000002,
+      "std": 0.021941480611585216
+    },
+    "behavior_presence_P": {
+      "mean": 0.9584983818451561,
+      "std": 0.03815702788900877
+    },
+    "behavior_presence_R": {
+      "mean": 0.8713539320606789,
+      "std": 0.037279784307415076
+    },
+    "behavior_presence_F1": {
+      "mean": 0.9125094738101596,
+      "std": 0.03320779636739718
+    },
+    "behavior_PR_AUC": {
+      "mean": 0.9669231511339266,
+      "std": 0.008916577965809455
+    },
+    "behavior_span_exact_P": {
+      "mean": 0.49880650343759886,
+      "std": 0.039305964745643525
+    },
+    "behavior_span_exact_R": {
+      "mean": 0.47627155435474666,
+      "std": 0.03870178379937048
+    },
+    "behavior_span_exact_F1": {
+      "mean": 0.48618921510800656,
+      "std": 0.03123524829554981
+    },
+    "behavior_span_char_P": {
+      "mean": 0.6982875527644691,
+      "std": 0.05546585111922535
+    },
+    "behavior_span_char_R": {
+      "mean": 0.6227535641880121,
+      "std": 0.08435774128906569
+    },
+    "behavior_span_char_F1": {
+      "mean": 0.654564707295114,
+      "std": 0.05449235117280812
+    },
+    "behavior_predicted_spans": {
+      "mean": 101.2,
+      "std": 9.244303265100235
+    },
+    "behavior_single_char_spans": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "behavior_single_char_span_rate": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "selection_span_F1": {
+      "mean": 0.5703769612015602,
+      "std": 0.03806812686630895
+    },
+    "inner_best_selection_span_F1": {
+      "mean": 0.600552522573677,
+      "std": 0.056175369670030666
+    }
+  },
+  "note": "behavior_prob remains a continuous harmful-signal score; has_behavior is determined by whether the CRF decoded any span"
+}

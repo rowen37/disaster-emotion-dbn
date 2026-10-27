@@ -20,9 +20,9 @@ import seaborn as sns
 plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']   # CJK-capable font on macOS
 plt.rcParams['axes.unicode_minus'] = False
 
-MODEL_PATH = "/Users/rogerbqw/Downloads/pytorch-NER-main/resource/chinese-roberta-wwm-ext"
-VAL_PATH = "smp2020_data/usual_eval_labeled.txt"
-SAVE_PATH = "checkpoints/best_cls_1.pt"
+MODEL_PATH = "/Users/rogerbqw/Downloads/毕设数据/Thesis-ZJU/span_extract/resource/chinese-roberta-wwm-ext"
+VAL_PATH = "/Users/rogerbqw/Downloads/毕设数据/Thesis-ZJU/SA_NER/smp2020_data/usual_eval_labeled.txt"
+SAVE_PATH = "/Users/rogerbqw/Downloads/毕设数据/Thesis-ZJU/SA_NER/checkpoints/best_cls_1.pt"
 
 MAX_LEN = 64
 BATCH_SIZE = 16
