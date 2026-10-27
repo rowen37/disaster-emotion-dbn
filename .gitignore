@@ -40,3 +40,7 @@ data_stage2/
 output.csv/
 behavior_span_rows.csv
 *.inspect.ndjson
+
+# junk
+node_modules
+.~*
