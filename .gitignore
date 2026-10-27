@@ -13,6 +13,8 @@ smp2020_data/
 data_input/
 span_output_new/
 inputs/
+data/
+data_stage2/
 
 # R
 .Rhistory
@@ -24,7 +26,6 @@ renv/
 
 # outputs
 output/
-data_stage2/
 *.log
 
 # OS
